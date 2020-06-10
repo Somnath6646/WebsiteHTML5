@@ -70,7 +70,7 @@
 	<div class="w-full container mx-auto p-6">
 			
 		<div class="w-full flex items-center justify-between">
-			<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+			<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="http://localhost:63342/WebsiteHTML/TwoProfileCard.html">
 				 <img src = "logowhitetrsvg.svg" class="h-20 fill-current text-indigo-600 pr-2"  viewBox="0 0 20 20"></img>
 			</a>
 			
@@ -124,6 +124,41 @@
   <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
+
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	<script>
+		//Init tooltips
+		tippy('.link',{
+		  placement: 'bottom'
+		})
+
+		//Toggle mode
+		const toggle = document.querySelector('.js-change-theme');
+		const body = document.querySelector('body');
+		const profile = document.getElementById('profile');
+
+
+		toggle.addEventListener('click', () => {
+
+		  if (body.classList.contains('text-gray-900')) {
+			toggle.innerHTML = "☀️";
+			body.classList.remove('text-gray-900');
+			body.classList.add('text-gray-100');
+			profile.classList.remove('bg-white');
+			profile.classList.add('bg-gray-900');
+		  } else
+		  {
+			toggle.innerHTML = "🌙";
+			body.classList.remove('text-gray-100');
+			body.classList.add('text-gray-900');
+			profile.classList.remove('bg-gray-900');
+			profile.classList.add('bg-white');
+
+		  }
+		});
+
+    </script>
 
 </div>
 
